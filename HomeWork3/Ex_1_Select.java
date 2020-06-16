@@ -1,12 +1,10 @@
-package HomeWork2;
+package HomeWork3;
+
+// 1 Сортировка выбором
 
 import java.util.Arrays;
 
-/*
-3.2 Cортировка массива с числами выбором
- */
-
-public class Ex_3_2 {
+public class Ex_1_Select {
     public static void main(String[] args) {
         int a [] = {5, 13, 8, 2, 1};
 
@@ -29,9 +27,9 @@ public class Ex_3_2 {
             min = i;
             for (int scan = i + 1; scan < array.length; scan++) {
                 if (array[scan] < array[min]){ // вводим условие: если элемент списка меньше элемента на минимальной позиции
-                min = scan; // то мы минимальный элемент передаем сканированию
+                    min = scan; // то мы минимальный элемент передаем сканированию
+                }
             }
-        }
             // если элемент списка оказался минимальным
             tmp = array[min]; // сохраняем в tmp минимальный элемент
             array[min] = array[i]; // минимальному значению массива присваиваем минимальную позицию
