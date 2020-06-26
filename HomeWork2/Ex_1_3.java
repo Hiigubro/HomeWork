@@ -10,17 +10,19 @@ import java.util.Scanner;
 public class Ex_1_3 {
     public static void main(String[] args) {
 
-        Scanner scanner = new Scanner(System.in);
-        System.out.println("Введите число");
-        int number = scanner.nextInt();
+        for (int i = 0; i < args.length; i++) {
+            System.out.println("Массив [" + i + "] = " + args[i]);
+        }
+
+        int n = Integer.parseInt(args [0]);
 
         int mult = 1;
         int currentDidgit;
-        for ( int i = 10; i < number; ){
-            currentDidgit = number % 10;
+        for ( int i = 10; i < n; ){
+            currentDidgit = n % 10;
             mult = mult * currentDidgit;
-            number = number / 10;
+            n = n / 10;
         }
-        System.out.println(mult);
+        System.out.println("Результат перемножения всех цифр из числа введенного через аргумент к исполняемой программе = " + mult);
     }
 }
