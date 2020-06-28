@@ -5,6 +5,7 @@ import java.text.DecimalFormat;
 public class CalculatorWithCounter_Main {
     public static void main(String[] args) {
 
+        //обёртывание классов
         CalculatorWithCounter calculatorWithCounter = new CalculatorWithCounter(new CalculatorWithOperator());
         calculatorWithCounter = new CalculatorWithCounter(new CalculatorWithMathCopy());
         calculatorWithCounter = new CalculatorWithCounter(new CalculatorWithMathExtends());
@@ -13,13 +14,11 @@ public class CalculatorWithCounter_Main {
         DecimalFormat df = new DecimalFormat("#.##");
 
         double a = 4.1;
-        double b = calculatorWithCounter.mult(15,7);
+        double b = calculatorWithCounter.multiply(15,7);
         double c = calculatorWithCounter.div(28,5);
         double d = calculatorWithCounter.power(c,2);
         double e = calculatorWithCounter.plus(b, d);
         double result = calculatorWithCounter.plus(a, e);
-
-        System.out.println("Число операций = " + calculatorWithCounter.getCountOperation());
 
         System.out.println("Реализация примера с помощью CalculatorWithMathCounter: ");
 
@@ -31,5 +30,7 @@ public class CalculatorWithCounter_Main {
 
         // 5. Деление сохраненного new результата на 0.0d
         System.out.printf(" / 0.0d = " + df.format(result), df.format(result / 0.0d));
+
+        System.out.println("Количество выполненных операций = " + calculatorWithCounter.getCountOperation());
     }
 }

@@ -1,6 +1,6 @@
 package HomeWork5;
 
-public class CalculatorWithCounter {
+public class CalculatorWithCounter{
 
     private ICalculator iCalculator;
     private int counter;
@@ -23,9 +23,9 @@ public class CalculatorWithCounter {
     }
 
     //умножение
-    public final double mult (double a, double b){
+    public final double multiply (double a, double b){
         counter++;
-        return iCalculator.mult(a, b);
+        return iCalculator.multiply(a, b);
     }
 
     //деление

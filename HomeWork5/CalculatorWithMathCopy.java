@@ -9,7 +9,7 @@ package HomeWork5;
  * можно использовать только вызовы  методов библиотеки Math,
  * все методы в данном классе НЕ статические
  */
-public class CalculatorWithMathCopy {
+public class CalculatorWithMathCopy implements ICalculator {
 
     public final double plus(double a, double b){
         return a + b;
